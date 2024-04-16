@@ -1,6 +1,6 @@
 # escape=`
 
-FROM mcr.microsoft.com/windows/servercore:1803 as installer
+FROM mcr.microsoft.com/windows/servercore:ltsc-2019 as installer
 
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';$ProgressPreference='silentlyContinue';"]
 
@@ -8,7 +8,7 @@ RUN Invoke-WebRequest -OutFile nodejs.zip -UseBasicParsing "https://nodejs.org/d
 Expand-Archive nodejs.zip -DestinationPath C:\; `
 Rename-Item "C:\\node-v8.10.0-win-x64" c:\nodejs
 
-FROM mcr.microsoft.com/windows/nanoserver:1803
+FROM mcr.microsoft.com/windows/nanoserver:ltsc-2019
 
 ENV `
     # Unset ASPNETCORE_URLS from aspnet base image
