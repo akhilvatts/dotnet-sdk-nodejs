@@ -5,5 +5,5 @@ services:
         build:
             context: .
             args:
-                BASE_IMAGE: mcr.microsoft.com/dotnet/sdk:4.8
+                BASE_IMAGE: mcr.microsoft.com/dotnet/framework/sdk:4.8-windowsservercore-1803
                 NODE_VERSION: 8.10.0
