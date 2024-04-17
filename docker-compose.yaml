@@ -1,9 +1,0 @@
-version: "2.4"
-services:
-    dotnet-node:
-        image: akhilvatts/dotnet-sdk-nodejs:4.8-8.10.0
-        build:
-            context: .
-            args:
-                BASE_IMAGE: mcr.microsoft.com/dotnet/framework/sdk:4.8-windowsservercore-1803
-                NODE_VERSION: 8.10.0

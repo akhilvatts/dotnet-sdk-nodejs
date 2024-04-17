@@ -8,10 +8,4 @@ RUN Expand-Archive nodejs.zip -DestinationPath C:\;
 RUN Rename-Item "C:\\node-v8.10.0-win-x64" c:\nodejs
 
 # Update PATH environment variable
-ENV PATH="$WindowsPATH;C:\nodejs"
-
-ENV PATH="$WindowsPATH;C:\Program Files\dotnet"
-
-ENV PATH="$WindowsPATH;C:\Program Files\NuGet"
-
-ENV PATH="$WindowsPATH;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin"
+ENV PATH="$WindowsPATH;C:\nodejs;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin;C:\Program Files\NuGet;C:\Program Files\dotnet"
