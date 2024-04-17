@@ -13,7 +13,7 @@ on:
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4
@@ -41,5 +41,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: 4.8-8.10.0
+          tags: 6.0-8.10.0
           labels: akhilvatts/dotnet-sdk-nodejs
